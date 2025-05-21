@@ -90,6 +90,13 @@ input[type=submit] {
 
 
 
+
+
+
+
+
+
+
 #main-slider .home-slider {
   overflow: visible;
 }
@@ -263,6 +270,7 @@ only screen and (max-width: 767px) {
   }
 }
 
+
 #main-about-us .about-us-home {
   text-align: center;
 }
@@ -301,13 +309,13 @@ only screen and (max-width: 767px) {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #main-about-us .about-us-home .inner .title {
-      font-size: 60px;
+    font-size: 60px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   #main-about-us .about-us-home .inner .title {
-      font-size: 50px;
+    font-size: 50px;
   }
 }
 
@@ -315,6 +323,71 @@ only screen and (max-width: 767px) {
 
   #main-about-us .about-us-home .inner .title::before,
   .about-us-home .inner .title::after {
-      display: none;
+    display: none;
   }
 }
+
+
+#category-banner .category-banner-main {
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+#category-banner .category-banner-main .inner {
+  position: relative;
+  display: block;
+}
+
+#category-banner .category-banner-main .inner .image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+#category-banner .category-banner-main .inner .image::before {
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  content: "";
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  border: 1px solid #FFFFFF;
+}
+
+#category-banner .category-banner-main .inner .image img {
+  width: 100%;
+}
+
+#category-banner .category-banner-main .inner .content {
+  position: relative;
+  z-index: 9;
+  max-width: 80%;
+  margin: -25px auto 0;
+  padding: 15px 10px;
+}
+
+#category-banner .category-banner-main .inner .content .title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.125;
+  margin: 0;
+  text-align: center;
+}
+
+#category-banner .category-banner-main:hover .inner .image img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#category-banner .category-banner-main:hover .inner .image::before {
+  opacity: 1;
+}
+
