@@ -262,3 +262,59 @@ only screen and (max-width: 767px) {
     padding: 3px 15px;
   }
 }
+
+#main-about-us .about-us-home {
+  text-align: center;
+}
+
+#main-about-us .about-us-home .inner .title {
+  font-family: "Modesty";
+  font-size: 74px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+#main-about-us .about-us-home .inner .title::before {
+  padding-right: 10px;
+  content: url("../../img/home/title-decor-left.webp");
+}
+
+#main-about-us .about-us-home .inner .title::after {
+  padding-left: 10px;
+  content: url("../../img/home/title-decor-right.webp");
+}
+
+#main-about-us .about-us-home .inner .sub-title {
+  font-size: 18px;
+  font-weight: 350;
+  line-height: 1.25;
+  display: block;
+  margin-bottom: 25px;
+  letter-spacing: 5px;
+  color: #72A499;
+}
+
+#main-about-us .about-us-home .inner .desc p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #main-about-us .about-us-home .inner .title {
+      font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #main-about-us .about-us-home .inner .title {
+      font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+
+  #main-about-us .about-us-home .inner .title::before,
+  .about-us-home .inner .title::after {
+      display: none;
+  }
+}
