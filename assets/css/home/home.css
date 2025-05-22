@@ -1067,3 +1067,98 @@ only screen and (max-width: 767px) {
     margin-top: 15px;
   }
 }
+
+
+
+#brands-area .brands-title {
+  margin-bottom: 80px;
+}
+
+#brands-area .brands-title .sub-title {
+  font-family: "Modesty";
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: #72A499;
+}
+
+#brands-area .brands-title .title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0;
+  color: #333333;
+}
+
+#brands-area .brands-title .title.title-icon-both::before {
+  padding-right: 10px;
+  content: url("../../img/home/title-decor-left.webp");
+}
+
+#brands-area .brands-title .title.title-icon-both::after {
+  padding-left: 10px;
+  content: url("../../img/home/title-decor-right.webp");
+}
+
+#brands-area .brands-title .title.title-icon-left::before {
+  padding-right: 10px;
+  content: url("../../img/home/title-decor-left.webp");
+}
+
+#brands-area .brands-title .title.title-icon-right::after {
+  padding-left: 10px;
+  content: url("../../img/home/title-decor-right.webp");
+}
+
+#brands-area .brands-title p {
+  line-height: 1.75;
+  max-width: 570px;
+  margin-top: 25px;
+}
+
+#brands-area .brands-title.text-center p {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  #brands-area .brands-title {
+    margin-bottom: 60px;
+  }
+
+  #brands-area .brands-title .sub-title {
+    font-size: 50px;
+  }
+
+  #brands-area .brands-title .title {
+    font-size: 32px;
+  }
+
+  #brands-area .brands-title p {
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #brands-area .brands-title {
+    margin-bottom: 50px;
+  }
+
+  #brands-area .brands-title .sub-title {
+    font-size: 40px;
+  }
+
+  #brands-area .brands-title .title {
+    font-size: 24px;
+  }
+
+  #brands-area .brands-title .title::before,
+  .brands-title .title::after {
+    display: none !important;
+  }
+
+  #brands-area .brands-title p {
+    margin-top: 10px;
+  }
+}
