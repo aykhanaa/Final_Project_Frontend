@@ -35,15 +35,18 @@
             <div class="container">
                 <div class="row align-items-center">
 
+                    <!-- Header Logo Start -->
                     <div class="col">
                         <div class="header-logo">
                             <a href="index.html"><img style="margin-bottom: 20px;"
                                     src="assets/img/home/web-img-white.png" alt="Learts Logo"></a>
                         </div>
                     </div>
+                    <!-- Header Logo End -->
 
+                    <!-- Search Start -->
                     <div class="col">
-                        <nav class="site-main-menu menu-height-100 justify-content-center">
+                        <nav style="margin-left: -90px;" class="site-main-menu menu-height-100 justify-content-center">
                             <ul>
                                 <li><a href="home.html"><span>Home</span></a>
                                 </li>
@@ -75,13 +78,25 @@
                             </ul>
                         </nav>
                     </div>
+                    <!-- Search End -->
+
+                    <!-- Header Tools Start -->
                     <div class="col">
                         <div class="header-tools justify-content-end">
+
+                            <!-- Search Start -->
+                            <div style="width: 120px;" class="col-auto d-none d-xl-block">
+                                <div class="header2-search">
+                                    <form action="#">
+                                        <input type="text" placeholder="Search...">
+                                        <button class="btn"><i class="fas fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- Search End -->
                             <div class="header-login">
                                 <a href="login-register.html"><i class="fa-solid fa-user"></i></a>
-                            </div>
-                            <div class="header-search d-none d-sm-block">
-                                <a href="#offcanvas-search" class="offcanvas-toggle"><i class="fas fa-search"></i></a>
                             </div>
                             <div class="header-wishlist">
                                 <a href="wishlist.html" class="offcanvas-toggle"><span class="wishlist-count">3</span><i
@@ -93,6 +108,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Header Tools End -->
 
                 </div>
             </div>
@@ -235,64 +251,768 @@
     </section>
     <!-- Line -->
 
-        <!-- Product Section Start -->
-        <section id="product-area">
-            <div class="product-size section-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <ul class="product-tab-list nav">
-                                <li><a class="active" data-bs-toggle="tab" href="#tab-new-sale">New arrivals</a></li>
-                                <li><a data-bs-toggle="tab" href="#tab-sale-items">Sale items</a></li>
-                                <li><a data-bs-toggle="tab" href="#tab-best-sellers">Best sellers</a></li>
-                            </ul>
-                            <div class="prodyct-tab-content1 tab-content">
-                                <div class="tab-pane fade show active" id="tab-new-sale">
-                                    <div class="products row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
-    
-                                        <div class="col">
-                                            <div class="product">
-                                                <div class="product-thumb">
-                                                    <a href="product-details.html" class="image">
-                                                        <img src="assets/img/home/category-img-4.webp" alt="Product Image">
-                                                        <img class="image-hover " src="assets/img/home/category-img-3.webp"
-                                                            alt="Product Image">
-                                                    </a>
-                                                    <a href="wishlist.html" class="add-to-wishlist hintT-left"
-                                                        data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+    <!-- Product Section Start -->
+    <section id="product-area">
+        <div class="product-size section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="product-tab-list nav">
+                            <li><a class="active" data-bs-toggle="tab" href="#tab-new-sale">New arrivals</a></li>
+                            <li><a data-bs-toggle="tab" href="#tab-sale-items">Sale items</a></li>
+                            <li><a data-bs-toggle="tab" href="#tab-best-sellers">Best sellers</a></li>
+                        </ul>
+                        <div class="prodyct-tab-content1 tab-content">
+                            <div class="tab-pane fade show active" id="tab-new-sale">
+                                <div class="products row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-1-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-1-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Boho Beard Mug</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
                                                 </div>
-                                                <div class="product-info">
-                                                    <h6 class="title"><a href="product-details.html">Motorized Tricycle</a>
-                                                    </h6>
-                                                    <span class="price">
-                                                        $35.00
-                                                    </span>
-                                                    <div class="product-buttons">
-                                                        <a href="#quickViewModal" data-bs-toggle="modal"
-                                                            class="product-button hintT-top" data-hint="Quick View"><i
-                                                                class="fas fa-search"></i></a>
-                                                        <a href="#" class="product-button hintT-top"
-                                                            data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
-                                                        <a href="#" class="product-button hintT-top" data-hint="Compare"><i
-                                                                class="fas fa-random"></i></a>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-2-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-2-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Motorized Tricycle</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-3-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-3-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Walnut Cutting Board</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-4-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-4-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Pizza Plate Tray</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-5-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-5-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Minimalist Ceramic Pot</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-6-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-6-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Clear Cilicate Teapot</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-7-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-7-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Lucky Wooden Elephant</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-8-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-8-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Decarative Christmas Fox</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- Products End -->
+                            </div>
+                            <div class="tab-pane fade" id="tab-sale-items">
+                                <!-- Products Start -->
+                                <div class="products row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-7-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-7-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Lucky Wooden Elephant</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-6-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-6-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Clear Cilicate Teapot</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-5-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-5-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Minimalist Ceramic Pot</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-3-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-3-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Walnut Cutting Board</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-4-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-4-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Pizza Plate Tray</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-8-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-8-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Decarative Christmas Fox</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-1-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-1-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Boho Beard Mug</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-2-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-2-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Motorized Tricycle</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Products End -->
+                            </div>
+                            <div class="tab-pane fade" id="tab-best-sellers">
+                                <!-- Products Start -->
+                                <div class="products row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-3-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-3-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Walnut Cutting Board</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-7-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-7-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Lucky Wooden Elephant</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-8-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-8-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Decarative Christmas Fox</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-1-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-1-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Boho Beard Mug</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-2-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-2-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Motorized Tricycle</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-4-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-4-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Pizza Plate Tray</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-9-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-9-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Ceramic Equestrian</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="product">
+                                            <div class="product-thumb">
+                                                <a href="product-details.html" class="image">
+                                                    <img src="assets/img/home/product-10-1.webp" alt="Product Image">
+                                                    <img class="image-hover " src="assets/img/home/product-10-2.webp"
+                                                        alt="Product Image">
+                                                </a>
+                                                <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                    data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <div class="product-info">
+                                                <h6 class="title"><a href="product-details.html">Fish Cut Out Set</a>
+                                                </h6>
+                                                <span class="price">
+                                                    $35.00
+                                                </span>
+                                                <div class="product-buttons">
+                                                    <a href="#quickViewModal" data-bs-toggle="modal"
+                                                        class="product-button hintT-top" data-hint="Quick View"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <a href="#" class="product-button hintT-top"
+                                                        data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
+                                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i
+                                                            class="fas fa-random"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- Products End -->
                             </div>
                         </div>
                     </div>
-                    <!-- Product Tab End -->
-                    <div class="row g-0 justify-content-center learts-mt-50">
-                        <a href="#" class="btn p-0"><i class="fa-solid fa-plus"></i> load more ...</a>
-                    </div>
-    
                 </div>
-            </div>
-        </section>
+                <!-- Product Tab End -->
+                <div class="row g-0 justify-content-center learts-mt-50">
+                    <a href="#" class="btn p-0"><i class="fa-solid fa-plus"></i> load more ...</a>
+                </div>
 
+            </div>
+        </div>
+    </section>
 
 
 
