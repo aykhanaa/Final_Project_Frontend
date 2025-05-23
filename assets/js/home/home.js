@@ -221,4 +221,50 @@ document.addEventListener('DOMContentLoaded', function() {
             autoplay: {},
         });
     }
+
+    // Slick sliders
+    if (typeof window.slick === 'function' || (typeof $ === 'function' && typeof $.fn.slick === 'function')) {
+        // Helper function to initialize slick with vanilla JS
+        const initSlick = (selector, options) => {
+            if (typeof $ === 'function' && typeof $.fn.slick === 'function') {
+                $(selector).slick(options);
+            } else if (typeof window.slick === 'function') {
+                document.querySelectorAll(selector).forEach(el => {
+                    window.slick(el, options);
+                });
+            }
+        };
+
+        // Testimonial 
+        initSlick('.testimonial-slider', {
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+            nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>'
+        });
+
+        initSlick('.testimonial-carousel', {
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+            nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+            responsive: [{
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    }
+
+
+    
 });
