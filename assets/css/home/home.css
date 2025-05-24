@@ -88,12 +88,22 @@ input[type=submit] {
   cursor: pointer;
 }
 
+.mega-menu {
+  width: 250px !important;
+  padding: 10px !important;
+  margin-top: -2pc !important;
+}
 
+.mega-menu a {
+  white-space: nowrap; 
+  display: block;
+  padding: 10px 10px;
+  font-size: 14px;
+}
 
-
-
-
-
+.sub-menu{
+  margin-top: -2pc !important;
+}
 
 
 
@@ -953,7 +963,7 @@ only screen and (max-width: 767px) {
 }
 
 #product-area .product-info .product-buttons .product-button:hover {
-  background-color: #F8796C;
+  background-color: #9086ff;
 }
 
 #product-area .product-info .product-rating {
@@ -1225,3 +1235,64 @@ only screen and (max-width: 767px) {
     padding-left: 10px;
   }
 }
+
+#instagram-area .instagram-title { 
+  margin-bottom: 80px;
+  padding: 20px 0;
+  background-size: auto 100%;
+}
+
+#instagram-area .instagram-title .title {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0;
+  color: #333333;
+}
+
+#instagram-area .instagram-title .desc {
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+@media only screen and (max-width: 767px) {
+  
+#instagram-area .instagram-title {
+    margin-bottom: 60px;
+  }
+  
+#instagram-area .instagram-title .sub-title {
+    font-size: 50px;
+  }
+  
+#instagram-area .instagram-title .title {
+    font-size: 32px;
+  }
+  
+#instagram-area .instagram-title p {
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  
+#instagram-area .instagram-title {
+    margin-bottom: 50px;
+  }
+  
+#instagram-area .instagram-title .sub-title {
+    font-size: 40px;
+  }
+  
+#instagram-area .instagram-title .title {
+    font-size: 24px;
+  }
+  
+#instagram-area .instagram-title p {
+    margin-top: 10px;
+  }
+}
+
+#footer-area.footer-section {
+  background-color: #F8F8F8;
+}
+
