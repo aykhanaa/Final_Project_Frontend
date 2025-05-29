@@ -27,118 +27,316 @@
 </head>
 
 <body>
-    <!-- Header Section Start -->
-    <section id="navbar">
-        <div class="header-section header-menu-center section bg-white d-none d-xl-block">
-            <div class="container">
-                <div class="row align-items-center">
+    <header>
+        <section id="navbar">
+            <div class="header-section header-menu-center section bg-white d-none d-xl-block">
+                <div class="container">
+                    <div class="row align-items-center">
 
-                    <!-- Header Logo Start -->
-                    <div class="col">
-                        <div class="header-logo" style="margin-left: -6pc;">
-                            <a href="home.html"
-                                style="display: inline-block; cursor: pointer; z-index: 999; position: relative;"
-                                onclick="console.log">
-                                <img src="assets/img/home/web-img-white.png"
-                                    style="margin-bottom: 20px; cursor: pointer; pointer-events: auto;" />
-                            </a>
+                        <div class="col">
+                            <div class="header-logo" style="margin-left: -6pc;">
+                                <a href="home.html"
+                                    style="display: inline-block; cursor: pointer; z-index: 999; position: relative;"
+                                    onclick="console.log">
+                                    <img src="assets/img/home/web-img-white.png"
+                                        style="margin-bottom: 20px; cursor: pointer; pointer-events: auto;" />
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Header Logo End -->
 
-                    <!-- Search Start -->
-                    <div class="col">
-                        <nav style="margin-left: -15pc;" class="site-main-menu menu-height-100 justify-content-center">
-                            <ul>
-                                <li><a href="home.html"><span>Home</span></a>
-                                </li>
-                                <li class="has-children"><a href="shop.html"><span class="menu-text">Shop</span></a>
-                                    <ul class="sub-menu mega-menu" style=" margin-top: -2pc;width: 0pc;">
-                                        <li>
-                                            <ul>
-                                                <li><a href="product-details.html"><span class="menu-text">Shop
-                                                            Detail</span></a></li>
-                                                <li><a href="lost-password.html"><span class="menu-text">Lost
-                                                            Password</span></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
+                        <div class="col">
+                            <nav style="margin-left: -15pc;"
+                                class="site-main-menu menu-height-100 justify-content-center">
+                                <ul>
+                                    <li><a href="home.html"><span>Home</span></a>
+                                    </li>
+                                    <li class="has-children"><a href="shop.html"><span class="menu-text">Shop</span></a>
+                                        <ul class="sub-menu mega-menu" style=" margin-top: -2pc;width: 0pc;">
+                                            <li>
+                                                <ul>
+                                                    <li><a href="product-details.html"><span class="menu-text">Shop
+                                                                Detail</span></a></li>
+                                                    <li><a href="lost-password.html"><span class="menu-text">Lost
+                                                                Password</span></a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
 
-                                <li><a href="about.html"><span class="menu-text">About</span></a></li>
-                                </li>
-                                <li><a href="blog.html"><span class="menu-text">Blog</span></a>
-                                </li>
-                                <li class="has-children"><a href="contact.html"><span class="menu-text">Contact
-                                            us</span></a>
-                                    <ul style=" top: 100px;     min-width: 220px;" class="sub-menu">
-                                        <li><a href="elements-faq.html"><span class="menu-text">FAQ</span></a>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <!-- Search End -->
+                                    <li><a href="about.html"><span class="menu-text">About</span></a></li>
+                                    </li>
+                                    <li><a href="blog.html"><span class="menu-text">Blog</span></a>
+                                    </li>
+                                    <li class="has-children"><a href="contact.html"><span class="menu-text">Contact
+                                                us</span></a>
+                                        <ul style=" top: 100px;     min-width: 220px;" class="sub-menu">
+                                            <li><a href="elements-faq.html"><span class="menu-text">FAQ</span></a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
 
-                    <!-- Header Tools Start -->
-                    <div style="margin-left: -6rem;" class="col">
-                        <div class="header-tools justify-content-end" style="margin-left: 18pc;">
+                        <div style="margin-left: -6rem;" class="col">
+                            <div class="header-tools justify-content-end" style="margin-left: 18pc;">
 
-                            <!-- Search Start -->
-                            <div style="width: 14pc;" class="col-auto d-none d-xl-block">
-                                <div class="header2-search">
-                                    <form action="#">
-                                        <input type="text" placeholder="Search...">
-                                        <button class="btn"><i class="fas fa-search"></i></button>
-                                    </form>
+                                <div style="width: 14pc;" class="col-auto d-none d-xl-block">
+                                    <div class="header2-search">
+                                        <form action="#">
+                                            <input type="text" placeholder="Search...">
+                                            <button class="btn"><i class="fas fa-search"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                \ <div class="header-login">
+                                    <a href="login-register.html"><i class="fa-solid fa-user"></i></a>
+                                </div>
+                                <div class="header-wishlist">
+                                    <a href="wishlist.html" class="offcanvas-toggle"><span
+                                            class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                                </div>
+                                <div class="header-cart">
+                                    <a href="shopping-cart.html" class="offcanvas-toggle"><span
+                                            class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Search End -->
-                            <div class="header-login">
-                                <a href="login-register.html"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="blog-title-area">
+            <div class="page-title-size section" style="margin-bottom: 4pc;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="page-title">
+                                <h1 class="title">Blog</h1>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                                    <li class="breadcrumb-item active"><a href="blog.html">Blog</a></li>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="header-wishlist">
-                                <a href="wishlist.html" class="offcanvas-toggle"><span class="wishlist-count">3</span><i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                            <div class="header-cart">
-                                <a href="shopping-cart.html" class="offcanvas-toggle"><span
-                                        class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
-                            </div>
+
                         </div>
                     </div>
-                    <!-- Header Tools End -->
+                </div>
+            </div>
+        </section>
+
+        <section id="blog-area">
+            <div class="blog-size section-padding">
+                <div class="container">
+                    <div class="row learts-mb-n40 ">
+
+                        <div class="col-lg-4 col-md-6 col-12 learts-mb-40">
+                            <div class="blog">
+                                <div class="image">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-1.webp"
+                                            alt="Blog Image"></a>
+                                </div>
+                                <div class="content">
+                                    <ul class="meta">
+                                        <li><i class="far fa-calendar"></i><a href="#">January 22, 2020</a></li>
+                                    </ul>
+                                    <h5 class="title"><a href="blog-details.html">Start Online
+                                            Blog</a></h5>
+                                    <div class="desc">
+                                        <p>Working on writing our first book has been one of the most amazing projects.
+                                            It
+                                            seems like it will be forever until I get to show you what we’ve been…</p>
+                                    </div>
+                                    <a href="blog-details.html" class="link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 learts-mb-40">
+                            <div class="blog">
+                                <div class="image">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-2.webp"
+                                            alt="Blog Image"></a>
+                                </div>
+                                <div class="content">
+                                    <ul class="meta">
+                                        <li><i class="far fa-calendar"></i><a href="#">January 22, 2020</a></li>
+                                    </ul>
+                                    <h5 class="title"><a href="blog-details.html">Tile Tray with Brass
+                                            Handles</a></h5>
+                                    <div class="desc">
+                                        <p>Happy New Year All! I am back after the holiday break and so excited for all
+                                            the
+                                            home projects I have planned in 2020. So when they asked me to come…</p>
+                                    </div>
+                                    <a href="blog-details.html" class="link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 learts-mb-40">
+                            <div class="blog">
+                                <div class="image">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-3.webp"
+                                            alt="Blog Image"></a>
+                                </div>
+                                <div class="content">
+                                    <ul class="meta">
+                                        <li><i class="far fa-calendar"></i><a href="#">January 22, 2020</a></li>
+                                    </ul>
+                                    <h5 class="title"><a href="blog-details.html">Dining Table Chairs
+                                            Makeover</a></h5>
+                                    <div class="desc">
+                                        <p>I did not know exactly the shape I was looking for, but knew that I wanted to
+                                            paint them with this SUPER pretty Krylon® Italian Olive color. I stopped at…
+                                        </p>
+                                    </div>
+                                    <a href="blog-details.html" class="link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 learts-mb-40">
+                            <div class="blog">
+                                <div class="image">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-4.webp"
+                                            alt="Blog Image"></a>
+                                </div>
+                                <div class="content">
+                                    <ul class="meta">
+                                        <li><i class="far fa-calendar"></i><a href="#">January 22, 2020</a></li>
+                                    </ul>
+                                    <h5 class="title"><a href="blog-details.html">Faux Map Drawer Dresser</a>
+                                    </h5>
+                                    <div class="desc">
+                                        <p>I gave you all a peek at my guest room makeover yesterday and promised I
+                                            would
+                                            share all the details on my DIY Map Dresser, so here we go! I initially had…
+                                        </p>
+                                    </div>
+                                    <a href="blog-details.html" class="link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 learts-mb-40">
+                            <div class="blog">
+                                <div class="image">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-5.webp"
+                                            alt="Blog Image"></a>
+                                </div>
+                                <div class="content">
+                                    <ul class="meta">
+                                        <li><i class="far fa-calendar"></i><a href="#">January 22, 2020</a></li>
+                                    </ul>
+                                    <h5 class="title"><a href="blog-details.html">Printable Season Postcards
+                                            2019</a></h5>
+                                    <div class="desc">
+                                        <p>The print is an 8×10. You can print it at your house or at a local print
+                                            place
+                                            like Costco or FedEx Office. I recommend printing on card stock. Please…</p>
+                                    </div>
+                                    <a href="blog-details.html" class="link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 learts-mb-40">
+                            <div class="blog">
+                                <div class="image">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-6.webp"
+                                            alt="Blog Image"></a>
+                                </div>
+                                <div class="content">
+                                    <ul class="meta">
+                                        <li><i class="far fa-calendar"></i><a href="#">January 22, 2020</a></li>
+                                    </ul>
+                                    <h5 class="title"><a href="blog-details.html">Make a State Necklace</a>
+                                    </h5>
+                                    <div class="desc">
+                                        <p>In attempt to make my own state shaped necklace, I did a little researching
+                                            last
+                                            night and found a great tutorial on the blog, V Juliet. I had everything I
+                                            needed so…</p>
+                                    </div>
+                                    <a href="blog-details.html" class="link">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row learts-mt-50">
+                        <div class="col text-center">
+                            <a href="#" class="btn btn-dark btn-outline-hover-dark">Load More</a>
+                        </div>
+                    </div>
 
                 </div>
             </div>
+        </section>
+    </main>
 
-        </div>
-    </section>
-    <!-- Header Section End -->
+    <footer>
+        <section id="footer-area">
+            <div class="footer-section section section-padding" style="background-color: #f8f8f8;margin-top: 45px;">
+                <div class="container">
+                    <div class="row learts-mb-n40">
 
-    <!-- Page Title/Header Start -->
-    <section id="blog-title-area">
-        <div class="page-title-size section" style="margin-bottom: 4pc;">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="page-title">
-                            <h1 class="title">Blog</h1>
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                                <li class="breadcrumb-item active"><a href="blog.html">Blog</a></li>
+                        <div class="col-lg-6 learts-mb-40">
+                            <div class="widget-about">
+                                <img src="assets/img/home/mozart_logo_.png" alt="">
+                                <p style="opacity: 0.60; font-size: medium; ">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Quod
+                                    itaque recusandae commodi mollitia facere iure nisi, laudantium quis quas
+                                    perferendis a
+                                    minus dolores.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 learts-mb-40" style="margin-top: 25px;">
+                            <div class="row">
+                                <div class="col">
+                                    <ul class="widget-list">
+                                        <li><a href="#">About us</a></li>
+                                        <li><a href="#">Store location</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Orders</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <ul class="widget-list">
+                                        <li><a href="#">Returns</a></li>
+                                        <li><a href="#">Support Policy</a></li>
+                                        <li><a href="#">Size Guide</a></li>
+                                        <li><a href="#">FAQs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 learts-mb-40">
+                            <ul class="widget-list" style="margin-top: 25px;">
+                                <li> <i class="fab fa-twitter"></i> <a href="https://www.twitter.com/">Twitter</a></li>
+                                <li> <i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/">Facebook</a>
                                 </li>
+                                <li> <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/">Instagram</a>
+                                </li>
+                                <li> <i class="fab fa-youtube"></i> <a href="https://www.youtube.com/">Youtube</a></li>
                             </ul>
                         </div>
 
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Page Title/Header End -->
-    
+        </section>
+    </footer>
 
 
 
@@ -153,7 +351,8 @@
 
 
 
-<script src="assets/js/other/modernizr-3.6.0.min.js"></script>
+
+    <script src="assets/js/other/modernizr-3.6.0.min.js"></script>
     <script src="assets/js/other/jquery-3.4.1.min.js"></script>
     <script src="assets/js/other/jquery-migrate-3.1.0.min.js"></script>
     <script src="assets/js/other/bootstrap.bundle.min.js"></script>

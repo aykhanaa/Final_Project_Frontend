@@ -256,7 +256,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 
 
-/* SİZİN DƏQIQ CSS KODUNUZ */
 #video-banner-area .video-banner {
   display: -webkit-box;
   display: -webkit-flex;
@@ -302,7 +301,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   }
 }
 
-/* SADƏCƏ MODAL ÜÇÜN ƏLAVƏ CSS */
 .video-modal {
   display: none;
   position: fixed;
@@ -393,7 +391,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   }
 
 
-/* Section Title Styles */
 #insta-area .insta-title {
   margin-bottom: 80px;
   text-align: center;
@@ -416,7 +413,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   color: #333333;
 }
 
-/* Slider Container */
 #insta-area .insta-slider-container {
   position: relative;
   overflow: visible;
@@ -434,7 +430,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   gap: 10px;
 }
 
-/* Instafeed Item Styles */
 #insta-area .instafeed-item {
   position: relative;
   display: block;
@@ -494,7 +489,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   opacity: 1;
 }
 
-/* Navigation Buttons */
 #insta-area .slider-btn {
   position: absolute;
   top: 50%;
@@ -516,7 +510,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   visibility: hidden;
 }
 
-/* Arrow Icon Styling */
 #insta-area .arrow-icon {
   font-size: 65px;
   font-weight: 100;
@@ -525,7 +518,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   color: grey;
 }
 
-/* Show arrows on container hover */
 #insta-area .insta-slider-container:hover .slider-btn {
   opacity: 1;
   visibility: visible;
@@ -549,7 +541,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   right: -60px;
 }
 
-/* Responsive Design */
 @media only screen and (max-width: 1199px) {
   #insta-area .instafeed-item {
     width: calc(25% - 7.5px);
