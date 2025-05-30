@@ -90,7 +90,7 @@ input[type=submit] {
 
 
 #blog-title-area .page-title-size {
-    background-image: url('../../img/blog-details/page-title.webp');
+    background-image: url("../../img/blog/page-title.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -116,6 +116,12 @@ input[type=submit] {
   }
   
 
+  
+  .shop-toolbar {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: 60pc
+  }
 
 
 
