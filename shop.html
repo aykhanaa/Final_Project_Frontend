@@ -28,11 +28,15 @@
 
 <body>
 
+
+    
     <header>
         <section id="navbar">
             <div class="header-section header-menu-center section bg-white d-none d-xl-block">
                 <div class="container">
                     <div class="row align-items-center">
+
+                        <!-- Header Logo Start -->
                         <div class="col">
                             <div class="header-logo" style="margin-left: -6pc;">
                                 <a href="home.html"
@@ -43,7 +47,9 @@
                                 </a>
                             </div>
                         </div>
+                        <!-- Header Logo End -->
 
+                        <!-- Search Start -->
                         <div class="col">
                             <nav style="margin-left: -15pc;"
                                 class="site-main-menu menu-height-100 justify-content-center">
@@ -61,10 +67,13 @@
                                 </ul>
                             </nav>
                         </div>
+                        <!-- Search End -->
 
+                        <!-- Header Tools Start -->
                         <div style="margin-left: -6rem;" class="col">
                             <div class="header-tools justify-content-end" style="margin-left: 18pc;">
 
+                                <!-- Search Start -->
                                 <div style="width: 14pc;" class="col-auto d-none d-xl-block">
                                     <div class="header2-search">
                                         <form action="#">
@@ -74,6 +83,7 @@
                                     </div>
                                 </div>
 
+                                <!-- Search End -->
                                 <div class="user-account-dropdown">
                                     <a class="user-icon-btn" id="userAccountBtn">
                                         <i class="fas fa-user"></i>
@@ -94,17 +104,521 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Header Tools End -->
+
                     </div>
                 </div>
+
             </div>
         </section>
     </header>
 
+    <main>
+        <section id="shop-title-area">
+            <div class="page-title-size section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="page-title">
+                                <h1 class="title">Shop</h1>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                                    <li class="breadcrumb-item active"><a href="shop.html">Shop</a></li>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop-product-area section-padding pt-0">
+            <div class="shop-toolbar section-fluid border-bottom">
+                <div class="container">
+                    <div class="row learts-mb-n20">
+                        <div class="col-md-auto col-12 learts-mb-20" style="margin-top: 2pc;margin-left: 4pc;">
+                            <ul class="shop-toolbar-controls">
+
+                                <li>
+                                    <div class="product-sorting">
+                                        <select class="nice-select">
+                                            <option value="menu_order" selected="selected">Default sorting</option>
+                                            <option value="name">Sort by name: A to Z</option>
+                                            <option value="name-desc">Sort by name: Z to A</option>
+                                            <option value="price">Sort by price: low to high</option>
+                                            <option value="price-desc">Sort by price: high to low</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="product-column-toggle d-none d-xl-flex">
+                                        <button class="toggle hintT-top" data-hint="5 Column" data-column="5"><i
+                                                class="fa-solid fa-braille"></i></button>
+                                        <button class="toggle active hintT-top" data-hint="4 Column" data-column="4"><i
+                                                class="fa-solid fa-table-cells"></i></i></button>
+                                        <button class="toggle hintT-top" data-hint="3 Column" data-column="3"><i
+                                                class="fa-solid fa-table-cells-large"></i></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="product-filter-toggle" href="#product-filter">Filters</a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="product-filter" class="product-filter section-fluid bg-light">
+                <div class="container-fluid">
+                    <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1 learts-mb-n30">
+
+                        <div class="col learts-mb-30" style="margin-left: 6pc;">
+                            <h3 class="widget-title product-filter-widget-title">Price filter</h3>
+                            <ul class="widget-list product-filter-widget customScroll">
+                                <li> <a href="#">All</a></li>
+                                <li> <a href="#"><span class="amount"><span class="cur-symbol">$</span>0.00</span> -
+                                        <span class="amount"><span class="cur-symbol">$</span>80.00</span></a></li>
+                                <li> <a href="#"><span class="amount"><span class="cur-symbol">$</span>80.00</span> -
+                                        <span class="amount"><span class="cur-symbol">$</span>160.00</span></a></li>
+                                <li> <a href="#"><span class="amount"><span class="cur-symbol">$</span>160.00</span> -
+                                        <span class="amount"><span class="cur-symbol">$</span>240.00</span></a></li>
+                                <li> <a href="#"><span class="amount"><span class="cur-symbol">$</span>240.00</span> -
+                                        <span class="amount"><span class="cur-symbol">$</span>320.00</span></a></li>
+                                <li> <a href="#"><span class="amount"><span class="cur-symbol">$</span>320.00</span>
+                                        +</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col learts-mb-30" style="margin-left: 9pc;">
+                            <h3 class="widget-title product-filter-widget-title">Categories</h3>
+                            <ul class="widget-list product-filter-widget customScroll">
+                                <li><a href="#">Gift ideas</a> <span class="count">16</span></li>
+                                <li><a href="#">Home Decor</a> <span class="count">16</span></li>
+                                <li><a href="#">Kids &amp; Babies</a> <span class="count">6</span></li>
+                                <li><a href="#">Kitchen</a> <span class="count">15</span></li>
+                                <li><a href="#">Kniting &amp; Sewing</a> <span class="count">4</span></li>
+                                <li><a href="#">Pots</a> <span class="count">4</span></li>
+                                <li><a href="#">Toys</a> <span class="count">6</span></li>
+                            </ul>
+                        </div>
+                        <div class="col learts-mb-30" style="margin-left: 17pc;">
+                            <h3 class="widget-title product-filter-widget-title">Brands</h3>
+                            <ul class="widget-list product-filter-widget customScroll">
+                                <li><a href="#">Alexander</a> <span class="count">(2)</span></li>
+                                <li><a href="#">Carmella</a> <span class="count">(4)</span></li>
+                                <li><a href="#">Danielle</a> <span class="count">(7)</span></li>
+                                <li><a href="#">Diana Day</a> <span class="count">(13)</span></li>
+                                <li><a href="#">Emilia</a> <span class="count">(2)</span></li>
+                                <li><a href="#">Gasmine</a> <span class="count">(15)</span></li>
+                                <li><a href="#">Jack &amp; Ella</a> <span class="count">(7)</span></li>
+                                <li><a href="#">Juliette</a> <span class="count">(11)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="product-size section-fluid learts-mt-70">
+                <div class="container">
+                    <div class="row learts-mb-n50">
+
+                        <div class="col-lg-9 col-12 learts-mb-50 order-lg-2">
+                            <!-- Products Start -->
+                            <div id="shop-products"
+                                class="products isotope-grid row row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+
+                                <div class="grid-sizer col-1"></div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/3D pot 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/3D pot 1-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">3D Attractive Pot</a></h6>
+                                            <span class="price">
+                                                $90.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/abstract pot 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/abstract pot 1-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Abstract Folded Pots</a>
+                                            </h6>
+                                            <span class="price">
+                                                $90.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/blender 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/blender 1-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Electric Egg Blender</a>
+                                            </h6>
+                                            <span class="price">
+                                                $190.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/camera 1-2.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/camera 1-1.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Digital Camera System</a>
+                                            </h6>
+                                            <span class="price">
+                                                $110.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/teapot 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/teapot 2-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Aluminium Equestrian</a>
+                                            </h6>
+                                            <span class="price">
+                                                $150.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/fish 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/fish 1-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Fish Cut Out Set</a></h6>
+                                            <span class="price">
+                                                $70.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/fox 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/fox 2-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Decorative Cristmas Fox</a>
+                                            </h6>
+                                            <span class="price">
+                                                $110.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/fox 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/fox 2-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Decorative Cristmas Fox</a>
+                                            </h6>
+                                            <span class="price">
+                                                $110.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/fox 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/fox 2-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Decorative Cristmas Fox</a>
+                                            </h6>
+                                            <span class="price">
+                                                $110.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid-item col featured">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a href="product-details.html" class="image">
+                                                <img src="assets/img/shop/fox 1-1.webp" alt="Product Image">
+                                                <img class="image-hover " src="assets/img/shop/fox 2-2.webp"
+                                                    alt="Product Image">
+                                            </a>
+                                            <a href="wishlist.html" class="add-to-wishlist hintT-left"
+                                                data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h6 class="title"><a href="product-details.html">Decorative Cristmas Fox</a>
+                                            </h6>
+                                            <span class="price">
+                                                $110.00
+                                            </span>
+                                            <div class="product-buttons">
+                                                <a href="product-details.html" class="product-button hintT-top"
+                                                    data-hint="View"><i class="fas fa-search"></i></a>
+                                                <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
+                            </div>
+                            <div class="text-center learts-mt-70">
+                                <a href="#" class="btn btn-dark btn-outline-hover-dark"><i class="fa-solid fa-plus"></i>
+                                    More</a>
+                            </div>
+                        </div>
 
+                        <div class="col-lg-3 col-12 learts-mb-10 order-lg-1">
 
+                            <div class="single-widget learts-mb-40">
+                                <div class="widget-search">
+                                    <form action="#">
+                                        <input type="text" placeholder="Search products....">
+                                        <button><i class="fas fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="single-widget learts-mb-40">
+                                <h3 class="widget-title product-filter-widget-title">Product categories</h3>
+                                <ul class="widget-list">
+                                    <li><a href="#">Gift ideas</a> <span class="count">16</span></li>
+                                    <li><a href="#">Home Decor</a> <span class="count">16</span></li>
+                                    <li><a href="#">Kids &amp; Babies</a> <span class="count">6</span></li>
+                                    <li><a href="#">Kitchen</a> <span class="count">15</span></li>
+                                    <li><a href="#">Kniting &amp; Sewing</a> <span class="count">4</span></li>
+                                    <li><a href="#">Pots</a> <span class="count">4</span></li>
+                                    <li><a href="#">Toys</a> <span class="count">6</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="single-widget learts-mb-40">
+                                <h3 class="widget-title product-filter-widget-title">Filters by price</h3>
+                                <div class="widget-price-range">
+                                    <input class="range-slider" type="text" data-min="0" data-max="350" data-from="0"
+                                        data-to="350" />
+                                </div>
+                            </div>
+
+                            <div class="single-widget learts-mb-40">
+                                <h3 class="widget-title product-filter-widget-title">Products</h3>
+                                <ul class="widget-products">
+                                    <li class="product">
+                                        <div class="thumbnail">
+                                            <a href="product-details.html"><img src="assets/img/shop/widget-1.webp"
+                                                    alt="List product"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="title"><a href="product-details.html">Walnut Cutting Board</a>
+                                            </h6>
+                                            <span class="price">
+                                                $100.00
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="product">
+                                        <div class="thumbnail">
+                                            <a href="product-details.html"><img src="assets/img/shop/widget-2.webp"
+                                                    alt="List product"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="title"><a href="product-details.html">Decorative Christmas
+                                                    Fox</a>
+                                            </h6>
+                                            <span class="price">
+                                                $50.00
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="product">
+                                        <div class="thumbnail">
+                                            <a href="product-details.html"><img src="assets/img/shop/widget-3.webp"
+                                                    alt="List product"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="title"><a href="product-details.html">Lucky Wooden Elephant</a>
+                                            </h6>
+                                            <span class="price">
+                                                $35.00
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="single-widget learts-mb-40">
+                                <h3 class="widget-title product-filter-widget-title">Product Tags</h3>
+                                <div class="widget-tags">
+                                    <a href="#">handmade</a>
+                                    <a href="#">learts</a>
+                                    <a href="#">mug</a>
+                                    <a href="#">product</a>
+                                    <a href="#">learts</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
     <footer>
@@ -161,6 +675,15 @@
             </div>
         </section>
     </footer>
+
+
+
+
+
+
+
+
+
 
 
 
