@@ -2,22 +2,21 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    
+    // data-bg-image atributuna uyğun background şəkli qoyur
     document.querySelectorAll('[data-bg-image]').forEach(function(element) {
         const image = element.getAttribute('data-bg-image');
         element.style.backgroundImage = `url(${image})`;
     });
-    
+
+    // data-bg-color atributuna uyğun background rəngi qoyur
     document.querySelectorAll('[data-bg-color]').forEach(function(element) {
         const color = element.getAttribute('data-bg-color');
         element.style.backgroundColor = color;
     });
 
-    
-    
-    const $ = window.jQuery; 
+    const $ = window.jQuery;
     if (typeof $ !== 'undefined' && $.fn.slick) {
-        
+
         $('.product-carousel').slick({
             infinite: true,
             slidesToShow: 4,
@@ -52,16 +51,17 @@ document.addEventListener('DOMContentLoaded', function() {
             nextArrow: '<button class="slick-next"><i class="ti-angle-right"></i></button>'
         });
 
+        // BURADA: asNavFor tək selector ilə düzəldildi (birdən çox eyni anda problem yarada bilər)
         $('.product-gallery-slider').slick({
             dots: true,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
-            asNavFor: '.product-thumb-slider, .product-thumb-slider-vertical',
+            asNavFor: '.product-thumb-slider', // sadəcə product-thumb-slider
             prevArrow: '<button class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
             nextArrow: '<button class="slick-next"><i class="fa-solid fa-angle-right"></i></button>'
         });
-        
+
         $('.product-thumb-slider').slick({
             infinite: true,
             slidesToShow: 4,
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prevArrow: '<button class="slick-prev"><i class="ti-angle-left"></i></button>',
             nextArrow: '<button class="slick-next"><i class="ti-angle-right"></i></button>'
         });
-        
+
         $('.product-thumb-slider-vertical').slick({
             infinite: true,
             slidesToShow: 3,
@@ -82,16 +82,17 @@ document.addEventListener('DOMContentLoaded', function() {
             prevArrow: '<button class="slick-prev"><i class="ti-angle-up"></i></button>',
             nextArrow: '<button class="slick-next"><i class="ti-angle-down"></i></button>'
         });
-        
+
     } else {
         console.warn('jQuery veya Slick slider yüklü değil!');
     }
 
-    
+    // Quantity düymələri üçün funksiyalar
     function initQuantityButtons() {
         const qtyButtons = document.querySelectorAll('.qty-btn');
-        
+
         qtyButtons.forEach(function(button) {
+            // əvvəlki eventləri silirik ki, birdən çox əlavə olmasın
             button.removeEventListener('click', handleQuantityClick);
             button.addEventListener('click', handleQuantityClick);
         });
@@ -99,41 +100,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleQuantityClick(e) {
         e.preventDefault();
-        
-        const button = this;
-        const parent = button.closest('.quantity-wrapper') || 
-                      button.closest('.qty-wrapper') || 
-                      button.closest('.product-quantity') ||
-                      button.parentElement;
-        
-        let input = parent.querySelector('input[type="number"]') ||
-                   parent.querySelector('input.qty') ||
-                   parent.querySelector('input.quantity') ||
-                   parent.querySelector('.qty-input') ||
-                   parent.querySelector('input');
 
+        const button = this;
+        // Quantity inputu tapmaq üçün valideyn divləri yoxlanır
+        const parent = button.closest('.quantity-wrapper') ||
+            button.closest('.qty-wrapper') ||
+            button.closest('.product-quantity') ||
+            button.parentElement;
+
+        // input seçimi geniş tutulub ki, müxtəlif strukturda işləsin
+        let input = parent.querySelector('input[type="number"]') ||
+            parent.querySelector('input.input-qty') ||
+            parent.querySelector('input.qty') ||
+            parent.querySelector('input.quantity') ||
+            parent.querySelector('.qty-input') ||
+            parent.querySelector('input');
+
+        // Əgər hələ də tapılmayıbsa, düymənin qardaş elementlərinə baxırıq
         if (!input) {
             input = button.previousElementSibling?.tagName === 'INPUT' ? button.previousElementSibling :
-                   button.nextElementSibling?.tagName === 'INPUT' ? button.nextElementSibling : null;
+                button.nextElementSibling?.tagName === 'INPUT' ? button.nextElementSibling : null;
         }
 
         if (!input) {
-            console.warn('Quantity input bulunamadı:', button);
+            console.warn('Quantity input tapılmadı:', button);
             return;
         }
 
         let currentValue = parseInt(input.value) || 1;
         let newValue = currentValue;
 
-        if (button.classList.contains('plus') || 
+        if (button.classList.contains('plus') ||
             button.classList.contains('qty-plus') ||
             button.classList.contains('increase') ||
             button.getAttribute('data-action') === 'plus') {
             newValue = currentValue + 1;
-        } else if (button.classList.contains('minus') || 
-                  button.classList.contains('qty-minus') ||
-                  button.classList.contains('decrease') ||
-                  button.getAttribute('data-action') === 'minus') {
+        } else if (button.classList.contains('minus') ||
+            button.classList.contains('qty-minus') ||
+            button.classList.contains('decrease') ||
+            button.getAttribute('data-action') === 'minus') {
             newValue = currentValue > 1 ? currentValue - 1 : 1;
         }
 
@@ -145,12 +150,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         input.value = newValue;
 
+        // Change event tetiklenir
         const changeEvent = new Event('change', { bubbles: true });
         input.dispatchEvent(changeEvent);
 
+        // İstəyə bağlı custom event tetiklenir
         const customEvent = new CustomEvent('quantityChanged', {
-            detail: { 
-                oldValue: currentValue, 
+            detail: {
+                oldValue: currentValue,
                 newValue: newValue,
                 input: input,
                 button: button
@@ -159,21 +166,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         input.dispatchEvent(customEvent);
 
-        console.log(`Quantity changed from ${currentValue} to ${newValue}`);
+        console.log(`Quantity dəyişdi: ${currentValue} → ${newValue}`);
     }
 
-  
+    // İlk dəfə quantity düymələrini init edirik
     initQuantityButtons();
 
-   
+    // Dinamik DOM dəyişikliklərinə görə yenidən init etmək üçün MutationObserver
     const observer = new MutationObserver(function(mutations) {
         let shouldReinit = false;
-        
+
         mutations.forEach(function(mutation) {
             if (mutation.type === 'childList') {
                 mutation.addedNodes.forEach(function(node) {
                     if (node.nodeType === 1) { // Element node
-                        if (node.classList?.contains('qty-btn') || 
+                        if (node.classList?.contains('qty-btn') ||
                             node.querySelector?.('.qty-btn')) {
                             shouldReinit = true;
                         }
@@ -192,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         subtree: true
     });
 
-   
+    // USER ACCOUNT DROPDOWN
     const userAccountBtn = document.getElementById("userAccountBtn");
     const userDropdown = document.getElementById("userDropdown");
     let isDropdownOpen = false;
@@ -264,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
         userAccountBtn.setAttribute("aria-expanded", "false");
     }
 
-    
+    // MOBILE MENU TOGGLE
     const mobileMenuToggle = document.querySelector(".fa-bars");
     const mobileMenu = document.querySelector(".responsive-menu #menu");
 
@@ -274,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
+    // SMOOTH SCROLL for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
     anchorLinks.forEach((link) => {
@@ -295,9 +302,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-  
 });
 
+// USER LOGIN / LOGOUT & DROPDOWN UPDATE FUNCTIONS
 
 window.checkUserLogin = () => {
     return false;
@@ -331,7 +338,7 @@ window.logout = () => {
     window.location.href = "home.html";
 };
 
+// Quantity dəyişmə eventini dinləmək üçün
 window.addEventListener('quantityChanged', function(e) {
-    console.log('Quantity değişti:', e.detail);
-    
+    console.log('Quantity dəyişdi:', e.detail);
 });
