@@ -88,21 +88,34 @@ input[type=submit] {
   cursor: pointer;
 }
 
-.mega-menu {
-  width: 250px !important;
-  padding: 10px !important;
-  margin-top: -2pc !important;
+
+#shop-title-area .page-title-size {
+  background-image: url("../../img/shop/page-title.webp");
+  background-repeat: no-repeat;    
+  background-size: cover;            
+  background-position: center center;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  #shop-title-area .page-title-size {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #shop-title-area .page-title-size {
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #shop-title-area .page-title-size {
+    padding: 50px 0;
+  }
 }
 
-.mega-menu a {
-  white-space: nowrap; 
-  display: block;
-  padding: 10px 10px;
-  font-size: 14px;
-}
 
-.sub-menu{
-  margin-top: -2pc !important;
+.shop-toolbar {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-left: 60pc
 }
 
 

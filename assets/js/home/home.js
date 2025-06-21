@@ -1,5 +1,218 @@
 "use strict";
 
+
+// Navbar JavaScript Functions
+
+// Toggle User Dropdown Menu
+function toggleDropdown() {
+    const dropdown = document.getElementById('userDropdown');
+    dropdown.classList.toggle('show');
+}
+
+// Toggle Mobile Menu
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const toggleBtn = document.querySelector('.mobile-menu-toggle i');
+    
+    mobileMenu.classList.toggle('show');
+    
+    // Change hamburger icon to X when menu is open
+    if (mobileMenu.classList.contains('show')) {
+        toggleBtn.className = 'fas fa-times';
+    } else {
+        toggleBtn.className = 'fas fa-bars';
+    }
+}
+
+// Close dropdown when clicking outside
+window.addEventListener('click', function(event) {
+    // Close user dropdown if clicked outside
+    if (!event.target.matches('.user-icon') && !event.target.closest('.user-dropdown')) {
+        const dropdown = document.getElementById('userDropdown');
+        if (dropdown && dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    }
+    
+    // Close mobile menu if clicked outside
+    if (!event.target.closest('.navbar') && !event.target.matches('.mobile-menu-toggle')) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const toggleBtn = document.querySelector('.mobile-menu-toggle i');
+        
+        if (mobileMenu && mobileMenu.classList.contains('show')) {
+            mobileMenu.classList.remove('show');
+            if (toggleBtn) {
+                toggleBtn.className = 'fas fa-bars';
+            }
+        }
+    }
+});
+
+// Close mobile menu when clicking on a link
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+    
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggleBtn = document.querySelector('.mobile-menu-toggle i');
+            
+            if (mobileMenu && mobileMenu.classList.contains('show')) {
+                mobileMenu.classList.remove('show');
+                if (toggleBtn) {
+                    toggleBtn.className = 'fas fa-bars';
+                }
+            }
+        });
+    });
+    
+    // Smooth scroll for anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || targetId === '#home') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                
+                const offsetTop = targetElement.offsetTop - 80; // Account for navbar height
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+// Handle search functionality
+function handleSearch(searchInput) {
+    const searchTerm = searchInput.value.trim();
+    
+    if (searchTerm) {
+        // You can implement your search logic here
+        console.log('Searching for:', searchTerm);
+        
+        // Example: redirect to search page
+        // window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
+        
+        // Or implement live search
+        // performLiveSearch(searchTerm);
+        
+        alert(`Searching for: ${searchTerm}`);
+    }
+}
+
+// Add search functionality to both desktop and mobile search
+document.addEventListener('DOMContentLoaded', function() {
+    // Desktop search
+    const desktopSearchForm = document.querySelector('.search-box');
+    if (desktopSearchForm) {
+        const desktopSearchInput = desktopSearchForm.querySelector('input');
+        const desktopSearchButton = desktopSearchForm.querySelector('button');
+        
+        desktopSearchButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            handleSearch(desktopSearchInput);
+        });
+        
+        desktopSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleSearch(desktopSearchInput);
+            }
+        });
+    }
+    
+    // Mobile search
+    const mobileSearchForm = document.querySelector('.mobile-search');
+    if (mobileSearchForm) {
+        const mobileSearchInput = mobileSearchForm.querySelector('input');
+        const mobileSearchButton = mobileSearchForm.querySelector('button');
+        
+        mobileSearchButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            handleSearch(mobileSearchInput);
+        });
+        
+        mobileSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleSearch(mobileSearchInput);
+            }
+        });
+    }
+});
+
+// Navbar scroll effect (optional)
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    
+    if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+    } else {
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    }
+});
+
+// Handle window resize
+window.addEventListener('resize', function() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const toggleBtn = document.querySelector('.mobile-menu-toggle i');
+    
+    // Close mobile menu on resize to desktop view
+    if (window.innerWidth > 768 && mobileMenu && mobileMenu.classList.contains('show')) {
+        mobileMenu.classList.remove('show');
+        if (toggleBtn) {
+            toggleBtn.className = 'fas fa-bars';
+        }
+    }
+});
+
+// Shopping cart and wishlist badge update functions
+function updateCartBadge(count) {
+    const cartBadges = document.querySelectorAll('.fas.fa-shopping-cart + .badge');
+    cartBadges.forEach(badge => {
+        badge.textContent = count;
+        if (count > 0) {
+            badge.style.display = 'flex';
+        } else {
+            badge.style.display = 'none';
+        }
+    });
+}
+
+function updateWishlistBadge(count) {
+    const wishlistBadges = document.querySelectorAll('.far.fa-heart + .badge');
+    wishlistBadges.forEach(badge => {
+        badge.textContent = count;
+        if (count > 0) {
+            badge.style.display = 'flex';
+        } else {
+            badge.style.display = 'none';
+        }
+    });
+}
+
+// Example usage:
+// updateCartBadge(5);
+// updateWishlistBadge(2);
+
+// Initialize tooltips or any other functionality when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('MozArt Navbar initialized successfully!');
+    
+    // Add any initialization code here
+    // For example, load cart count from localStorage
+    // const cartCount = localStorage.getItem('cartCount') || 0;
+    // updateCartBadge(cartCount);
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
 
